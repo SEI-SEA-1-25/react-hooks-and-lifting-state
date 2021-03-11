@@ -4,7 +4,7 @@ export default function FilterForm(props) {
   const formStyles = {
     border: '.3em solid green',
     display: 'flex',
-    'justify-content': 'center',
+    justifyContent: 'center',
     alignItems: 'center'
   }
   
