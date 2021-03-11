@@ -1,10 +1,14 @@
-import Counter from './components/Counter.jsx'
+// import Counter from './components/Counter.jsx'
+import FilterContainer from './components/FilterContainer'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      {/* <Counter /> */}
+      <h1>Fruit Filter</h1>
+      <FilterContainer />
+      
     </div>
   );
 }
