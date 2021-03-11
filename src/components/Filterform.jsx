@@ -1,12 +1,31 @@
-export default function FilterForm() {
+export default function FilterForm(props) {
+  // inline styling in React
+  // make an object of css styles
   const formStyles = {
-    border: '.3em solid green'
+    border: '.3em solid green',
+    display: 'flex',
+    'justify-content': 'center',
+    alignItems: 'center'
   }
   
   return (
     <div style={formStyles}>
-      hello from the filter form
-      {/* the form will live here */}
+      <form onSubmit={props.handleFruitSubmit}>
+        <label htmlFor='fruit-filter'>Enter A fruit!</label>
+
+        <input 
+          type='text'
+          value={props.fruitInputValue}
+          onChange={props.handleFruitChange}
+          placeholder='enter a fruit! 🍉'
+          id='fruit-filter'
+        />
+
+        <input
+          type='submit'
+          value='Submit to the FRUIT'
+        />
+      </form>
     </div>
   )
 }
