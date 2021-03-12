@@ -6,7 +6,7 @@ export default function Counter() {
   // example of having an object
   const [user, setUser] = useState({ name: 'Weston' })
 
-  // state would like this in a Class:
+  // state would look like this in a Class:
   // state = {
   //   count: 1,
   //   user: {
@@ -14,25 +14,25 @@ export default function Counter() {
   //   }
   // }
 
-  // use effect hooks
+  // use effect hooks (you can have more that one!)
+  
   // use effect runs after every render...
   useEffect(() => {
     // console.log('after every render')
     console.log(count)
 
-    // ...return callback is invoked on unmout like componentWillUnmount()
+    // return callback is invoked on unmout like componentWillUnmount()
     return () => {
       console.log('on every unmount')
     }
   })
 
-  // you can have more than one useEffect hook!
   // ...unless you pass it a variable in an array as a second arg
   // useEffect(() => {
   //   console.log('i only go when user changes!')
   // }, [user])
 
-  // // ...or you tell it to watch nothing...so it only runs once!
+  // ...or you tell it to watch nothing...so it only runs once!
   // useEffect(() => {
   //   console.log('I only run once!')
   //   return () => {
